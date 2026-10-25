@@ -1,7 +1,9 @@
-# Sprite atlas integration
+# Piston Punch V2 — Robot sprites
 
-The game renderer now supports `assets/piston-punch-sprite-atlas.png`.
+- `piston-punch-sprite-atlas.svg`: transparent vector atlas committed to the repository.
+- 288×288 viewBox; 6 columns × 6 rows; each frame is 48×48.
+- Animation rows: idle, walk, run, attack, jump, hurt/KO.
 
-Expected layout: 6 columns × 6 rows, 48×48 pixels per frame. Rows: idle, walk, run, attack, jump, hurt/KO. Until that PNG exists at the path above, the game deliberately falls back to its procedural robot so the page remains playable.
+The Canvas renderer loads this file locally and selects frames for idle, walking, running, punching and taking damage. If SVG loading fails, the game retains its procedural fallback robot.
 
-The extracted atlas from the provided concept sheet still needs to be copied into this repository at the expected path to activate the animated sprites.
+The SVG is a lightweight vector adaptation of the concept art's visual cues (dark armor, orange plating, cyan optics/core), not a pixel-perfect extraction of the provided raster concept sheet.
